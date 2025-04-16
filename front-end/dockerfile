@@ -1,0 +1,11 @@
+# Usa Nginx como servidor web
+FROM nginx:alpine
+
+# Remove o conteúdo padrão do Nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copia os arquivos estáticos para o diretório público do Nginx
+COPY . /usr/share/nginx/html
+
+# Expõe a porta padrão do Nginx
+EXPOSE 80
