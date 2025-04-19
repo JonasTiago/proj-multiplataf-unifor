@@ -7,8 +7,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #523A28;
+    background-color: #FFFAF0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -22,15 +22,15 @@ body {
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
+    background: #7F553B;
+    color: #FFFAF0;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #e8491d 3px solid;
+    border-bottom: #C89F78 3px solid;
 }
 
 header a {
-    color: #ffffff;
+    color: #FFFAF0;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
@@ -53,7 +53,7 @@ header #branding {
 
 header #branding h1 {
     margin: 0;
-    font-size: 24px; 
+    font-size: 24px;
 }
 
 header nav {
@@ -61,60 +61,76 @@ header nav {
     margin-top: 10px;
 }
 
-header .highlight, header .current a {
-    color: #e8491d;
+header .highlight,
+header .current a {
+    color: #C89F78;
     font-weight: bold;
 }
 
 header a:hover {
-    color: #cccccc;
+    color: #B08968;
     font-weight: bold;
 }
 
 main {
-    flex: 1; 
+    flex: 1;
     padding: 20px 0;
 }
 
-
 .hero {
     min-height: 400px;
-    background: url('src/images/placeholder-hero.jpg') no-repeat 0 -400px; 
+    background: url('src/images/placeolder-hero.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
-    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #505a61; 
+    position: relative;
+    z-index: 1;
+    background-color: #967259;
+    color: #FFFAF0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 
 .hero h1 {
-    margin-top: 100px;
-    font-size: 55px;
+    margin-top: 0;
+    font-size: 65px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #FFFAF0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .hero p {
     font-size: 20px;
+    font-weight: 600;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    color: #f87f0d;
 }
 
 .form-container {
-    background: #fff;
+    background: #FFFAF0;
     padding: 30px;
     margin-top: 30px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
-.form-container h1, .form-container h2 {
+.form-container h1,
+.form-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #35424a;
+    color: #523A28;
 }
 
 .form-group {
@@ -125,7 +141,7 @@ main {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
+    color: #523A28;
 }
 
 .form-group input[type="text"],
@@ -135,9 +151,10 @@ main {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #D7C1A8;
     border-radius: 4px;
     font-size: 16px;
+    color: #523A28;
 }
 
 .form-group textarea {
@@ -147,8 +164,8 @@ main {
 
 .button {
     display: inline-block;
-    background: #e8491d;
-    color: #fff;
+    background: #C89F78;
+    color: #3E2723;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -157,17 +174,21 @@ main {
     font-size: 16px;
     text-align: center;
     transition: background-color 0.3s ease;
+    line-height: normal;
 }
 
 .button:hover {
-    background: #35424a;
+    background: #B08968;
 }
 
 .button-secondary {
-    background: #35424a;
+    background: #7F553B;
+    color: #FFFAF0;
+    line-height: normal;
 }
+
 .button-secondary:hover {
-    background: #505a61;
+    background: #967259;
 }
 
 .form-container .button {
@@ -181,7 +202,7 @@ main {
 }
 
 .form-links a {
-    color: #e8491d;
+    color: #7F553B;
     text-decoration: none;
 }
 
@@ -189,26 +210,24 @@ main {
     text-decoration: underline;
 }
 
-
-
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 1fr 3fr; 
+    grid-template-columns: 1fr 3fr;
     gap: 20px;
     margin-top: 20px;
 }
 
 .sidebar {
-    background: #fff;
+    background: #FFFAF0;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
 .sidebar h3 {
     margin-bottom: 15px;
-    color: #35424a;
-    border-bottom: 1px solid #eee;
+    color: #523A28;
+    border-bottom: 1px solid #D7C1A8;
     padding-bottom: 10px;
 }
 
@@ -222,7 +241,7 @@ main {
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #e8491d;
+    color: #7F553B;
 }
 
 .sidebar ul li a:hover {
@@ -230,20 +249,20 @@ main {
 }
 
 .main-content {
-    background: #fff;
+    background: #FFFAF0;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
 .main-content h2 {
     margin-bottom: 20px;
-    color: #35424a;
+    color: #523A28;
 }
 
 .card {
-    background: #f9f9f9;
-    border: 1px solid #eee;
+    background: #FFFAF0;
+    border: 1px solid #D7C1A8;
     border-radius: 4px;
     padding: 15px;
     margin-bottom: 15px;
@@ -251,23 +270,24 @@ main {
 
 .card h4 {
     margin-bottom: 5px;
-    color: #35424a;
+    color: #523A28;
 }
 
 .card p {
     font-size: 14px;
     margin-bottom: 10px;
+    color: #523A28;
 }
 
 footer {
     padding: 20px;
     margin-top: 20px;
-    color: #ffffff;
-    background-color: #e8491d;
+    color: #523A28;
+    background-color: #C89F78;
     text-align: center;
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
     header #branding,
     header nav,
     header nav li {
@@ -280,10 +300,17 @@ footer {
         padding-bottom: 20px;
     }
 
+    .hero {
+        min-height: 300px;
+        background-position: center center;
+    }
+
     .hero h1 {
         font-size: 40px;
+        margin-top: 50px;
     }
-     .hero p {
+
+    .hero p {
         font-size: 18px;
     }
 
@@ -292,6 +319,6 @@ footer {
     }
 
     .dashboard-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
