@@ -1,8 +1,4 @@
-Claro! Aqui está um exemplo de um **README inicial completo**, explicando como rodar o projeto com **Node.js** e **Prisma**, incluindo instalação, configuração e execução:
-
----
-
-## 📘 Projeto Node + Prisma - API de Usuários
+## 📘 Projeto Multiplataforma unifor
 
 Este projeto é uma API REST desenvolvida em **Node.js** com **Express** e **Prisma ORM**, conectada a um banco de dados **PostgreSQL** (ou outro, se configurado).
 
