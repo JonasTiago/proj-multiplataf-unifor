@@ -1,18 +1,18 @@
 import express from 'express';
 import {
-    createProject,
-    getAllProjects,
-    getProjectById,
-    updateProject,
-    deleteProject
+  createProject,
+  getAllProjects,
+  getProjectById,
+  updateProject,
+  deleteProject,
 } from '../controllers/ong.js';
 
-const router = express.Router();
+const ongRoutes = express.Router();
 
-router.post('/', createProject);
-router.get('/', getAllProjects);
-router.get('/:id', getProjectById);
-router.put('/:id', updateProject);
-router.delete('/:id', deleteProject);
+ongRoutes.post('/', createProject);
+ongRoutes.get('/', getAllProjects);
+ongRoutes.get('/:id', getProjectById);
+ongRoutes.put('/:id', updateProject);
+ongRoutes.delete('/:id', deleteProject);
 
-export default router;
+export default ongRoutes;

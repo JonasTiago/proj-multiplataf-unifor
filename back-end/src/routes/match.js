@@ -1,18 +1,18 @@
 import express from 'express';
 import {
-    createMatch,
-    getAllMatches,
-    getMatchById,
-    updateMatch,
-    deleteMatch
+  createMatch,
+  getAllMatches,
+  getMatchById,
+  updateMatch,
+  deleteMatch,
 } from '../controllers/match.js';
 
-const router = express.Router();
+const matchRoutes = express.Router();
 
-router.post('/', createMatch);
-router.get('/', getAllMatches);
-router.get('/:id', getMatchById);
-router.put('/:id', updateMatch);
-router.delete('/:id', deleteMatch);
+matchRoutes.post('/', createMatch);
+matchRoutes.get('/', getAllMatches);
+matchRoutes.get('/:id', getMatchById);
+matchRoutes.put('/:id', updateMatch);
+matchRoutes.delete('/:id', deleteMatch);
 
-export default router;
+export default matchRoutes;

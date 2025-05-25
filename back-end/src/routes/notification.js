@@ -1,16 +1,16 @@
 import express from 'express';
 import {
-    createNotification,
-    getAllNotifications,
-    getNotificationById,
-    deleteNotification
+  createNotification,
+  getAllNotifications,
+  getNotificationById,
+  deleteNotification,
 } from '../controllers/notification.js';
 
-const router = express.Router();
+const notificationRoutes = express.Router();
 
-router.post('/', createNotification);
-router.get('/', getAllNotifications);
-router.get('/:id', getNotificationById);
-router.delete('/:id', deleteNotification);
+notificationRoutes.post('/', createNotification);
+notificationRoutes.get('/', getAllNotifications);
+notificationRoutes.get('/:id', getNotificationById);
+notificationRoutes.delete('/:id', deleteNotification);
 
-export default router;
+export default notificationRoutes;
