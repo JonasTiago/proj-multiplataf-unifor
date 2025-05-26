@@ -27,8 +27,11 @@
             <aside class="sidebar">
                 <h3>Menu Principal</h3>
                 <ul>
-                    <li><a href="#">Minhas Doações</a></li> <li><a href="#">Cadastrar Nova Doação</a></li> <li><a href="#">Ver Doações Disponíveis</a></li> <li><a href="#">Meus Eventos/Projetos</a></li> <li><a href="#">Buscar Voluntários</a></li> <li><a href="#">Buscar Projetos</a></li> <li><a href="#">Gerenciar Cadastro</a></li>
+            <li><a href="cadastrar-doacao.html">Cadastrar Nova Doação</a></li>
+            <li><a href="doacoes-disponiveis.html">Doações Disponíveis</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
                 </ul>
+
             </aside>
 
             <section class="main-content">
@@ -65,5 +68,13 @@
     <footer>
         <p>Plataforma Doação de Alimentos &copy; 2025</p>
     </footer>
+     <script>
+       document.querySelectorAll('.sidebar ul li a').forEach(link => {
+         link.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = this.getAttribute('href'); 
+    });
+});
+</script>
 </body>
 </html>
