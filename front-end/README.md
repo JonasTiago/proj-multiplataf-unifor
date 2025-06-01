@@ -49,6 +49,7 @@ Para rodar o projeto em ambiente de desenvolvimento:
 ```sh
 npm install -g http-server
 http-server ./src
+```
 
 ## Funcionamento
 
