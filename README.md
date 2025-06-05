@@ -20,6 +20,8 @@ Cada pasta possui seu próprio `README.md` com instruções específicas.
 
 ## Apresentaçãopo para o publico alvo
 
+- 📄 [Apresentação da plataforma](./docs/apresentação%20do%20projeto.pdf)
+
 ## ✅ Pré-requisitos
 
 - Node.js v18+
